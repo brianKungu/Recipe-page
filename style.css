@@ -1,0 +1,54 @@
+@import url("https://fonts.google.com/specimen/Outfit");
+
+@font-face {
+  font-family: "YoungSerif";
+  src: url("/assets/fonts/young-serif/YoungSerif-Regular.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(/assets/fonts/outfit/static/Outfit-Regular.ttf) format("tff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(/assets/fonts/outfit/static/Outfit-SemiBold.ttf) format("tff");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(/assets/fonts/outfit/static/Outfit-Bold.ttf) format("tff");
+  font-weight: 700;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@layer utilities {
+  /* font family & weight */
+  .youngSerif {
+    font-family: YoungSerif, serif;
+  }
+  .outFit {
+    font-family: Outfit, sans-serif;
+  }
+}
+
+.instructions li {
+  counter-increment: customListCounter;
+}
+
+.instructions li::before {
+  content: counter(customListCounter) ".";
+  color: hsl(14, 45%, 36%); /* Set the color of the numbers */
+  font-weight: bold; /* Optional: add styling to the numbers */
+  margin-right: 0.5em;
+}
